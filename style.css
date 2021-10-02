@@ -1,0 +1,106 @@
+body, p{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+#wave{
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 50px 0px;
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+header .player{
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    height: max-content;
+}
+header .player div:last-child{
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 8px;
+    margin-top: 10px;
+}
+#player1{
+    background-color: #d00000;
+}
+#player2{
+    background-color: #0000bb;
+}
+.game{
+    margin-bottom: 50px;
+}
+.board{
+    height: max-content!important;
+    width: max-content!important;
+    /* adicionando por causa do explorer não dar suporte para max-content */
+    width: 266px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.board > div{
+    display: flex;
+}
+.board > div > .cell:nth-child(2){
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.board .middle{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.board .cell{
+    min-height: 30px;
+    min-width: 30px;
+    font-size: 5em;
+    padding: 20px;
+    line-height: 0.6em;
+    cursor: pointer;
+}
+.empty{
+    width: 48px;
+    height: 48px;
+}
+.modal-finished{
+    position: absolute;
+    min-width: 140%;
+    min-height: 100%;
+    padding: 5%;
+    transform: translate(-16.18%, -95%);
+    flex-direction: column;
+    justify-content: space-evenly!important;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fff;
+}
+.modal-finished :first-child{
+    font-size: 2em;
+    padding: 10px;
+}
+.modal-finished :nth-child(2){
+    font-size: 1.6em;
+    text-align: center;
+    max-width: 80%;
+    padding: 10px;
+}
+.modal-finished :last-child{
+    padding: 10px;
+    cursor: pointer;
+}
+.player.waiter{
+    opacity: 0.5;
+}
